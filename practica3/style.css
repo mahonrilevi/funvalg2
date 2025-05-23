@@ -1,0 +1,65 @@
+
+
+header {
+    background-color: rgb(221, 194, 106);
+    padding:20px 40px ;
+    text-align: center;
+    color: white;
+    border: 1px solid black;
+    margin: 0px 0px 0px 0px;
+
+}
+
+nav {
+    background-color: rgb(48, 44, 44);
+    margin: 0px 0px;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 0px 0px 0px 10px;
+    gap: 15px;
+
+}
+
+.main {
+    background-color: aqua;
+    padding: 10px 400px 200px 10px;
+}
+
+button {
+    padding: 15px 30px ;
+    font-size: 15px;
+    background-color: rgb(221, 194, 106);
+    color: white;
+}
+
+img {
+    display:flex ;
+    position: absolute;
+    top: 10px;
+}
+ 
+form {
+    display: flex;
+    position: relative;
+    top: px;
+}
+
+.button {
+    top: 10px;
+    left: 1100px;
+}
+.div {
+    background-color: aqua;
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    background-color: black ;
+    color: white;
+    margin: 0px ;
+    padding: 10px;
+}
+
+
