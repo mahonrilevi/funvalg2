@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menú con Header y Logo</title>
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./output.css">
   <link rel="stylesheet" href="./style.css">
@@ -83,7 +84,7 @@
     });
   </script>
 
-<main class="h-[300%] bg-gray-100">
+<main class="h-[2500px] bg-gray-100">
   <div class="h-[27%] bg-[url('./imagenes/fondoblanco.png')] bg-cover bg-center text-center">
   <h1 class="lilita-one-regular mb-[20px]" class="text-8xl">YO SOY <br><i style="color: white;" class="text-6xl"> MAHONRI BARRIOS </i> <br> FRONTEND DEVELOPER</h1>
 <div class=" h-[50%] bg-[url('./imagenes/YO.png')]  bg-center bg-contain bg-no-repeat" id="foto"></div>
@@ -147,16 +148,46 @@
  </div>
  
 
-<div class="h-[27%] bg-[url('./imagenes/sud.png')] bg-cover bg-center text-center mt-10">
-  <h3 class="lilita-one-regular text-3xl mb-[99%]">MI PROYECTO MAS <br> IMPORTENTE</h3>
+<div class="h-[600px] bg-[url('./imagenes/sud.png')]  bg-no-repeat bg-center text-center mt-10">
+  <h3 class="lilita-one-regular text-3xl pt-[63px] mb-[350px]">MI PROYECTO MAS <br> IMPORTENTE</h3>
   
   
-  <a href="" class="w-[50%]  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 " ;">Mi Proyecto</a>
+  <a href="" class="w-[50%] h-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 " ;">Mi Proyecto</a>
+ </div>
+ 
+ <div class="flex items-center justify-center  bg-gray-100 h-auto">
+  <div class="bg-pink-200 w-[500px] flex flex-col items-center justify-center p-6 rounded-lg shadow-md">
+    <h3 class="lilita-one-regular text-center text-3xl mb-4">Conversación</h3>
 
+    <form class="w-full max-w-sm">
+      <div class="mb-5">
+        <label for="large-input" class="block mb-2 text-sm font-medium text-gray-900">Nombre</label>
+        <input type="text" id="large-input" class="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500">
+      </div>
+      <div class="mb-5">
+        <label for="base-input" class="block mb-2 text-sm font-medium text-gray-900">Email</label>
+        <input type="email" id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+      </div>
+      <div>
+        <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900">Comentario</label>
+        <input type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500">
+       </div>
+       <div class="text-center mt-3">
+       <button type="submit" class=" text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Enviar</button>
+        </div>
+      </form>
 
+  </div>
 </div>
 
 
 </main>
+
+
+<footer class="bg-">
+
+</footer>
+
+
 </body>
 </html>
