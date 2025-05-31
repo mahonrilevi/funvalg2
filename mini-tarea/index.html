@@ -6,6 +6,7 @@
   <title>Menú con Header y Logo</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./output.css">
+  <link rel="stylesheet" href="./style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Germania+One&family=Lilita+One&display=swap" rel="stylesheet">
@@ -82,10 +83,10 @@
     });
   </script>
 
-<main class="h-[280%] bg-gray-100">
+<main class="h-[300%] bg-gray-100">
   <div class="h-[27%] bg-[url('./imagenes/fondoblanco.png')] bg-cover bg-center text-center">
   <h1 class="lilita-one-regular mb-[20px]" class="text-8xl">YO SOY <br><i style="color: white;" class="text-6xl"> MAHONRI BARRIOS </i> <br> FRONTEND DEVELOPER</h1>
-<div class="h-[50%] bg-[url('./imagenes/YO.png')]  bg-center bg-contain bg-no-repeat"></div>
+<div class=" h-[50%] bg-[url('./imagenes/YO.png')]  bg-center bg-contain bg-no-repeat" id="foto"></div>
 <a href="https://mahonrilevi.github.io/funvalg2/" class="w-[50%]  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 " ;">Mis Proyectos</a>
 </div>
 
@@ -116,17 +117,44 @@
       </button>
    </a>
    </div>
-    <div class="grid-cols-1 text-center">
+    <div class="flex text-center justify-center">
      <a href="https://developer.mozilla.org/es/docs/Web/JavaScript">
-      <button style="border: none; background: none; padding: 0;">
-      <img src="./imagenes/js.png" alt="html" style="width: 300px; height: 180px;">
+      <button style="border: none; background: none; padding-left: 30px; ">
+      <img src="./imagenes/js.png" alt="html" style="width: auto; height: 180px; ;">
       </button>
      </a>
-    </div>
-   
+     <a href="https://github.com/">
+      <button style="border: none; background: none; padding: 0;">
+      <img src="./imagenes/github.png" alt="html" style="width: auto; height: 180px;">
+      </button>
+     </a>
+     </div>
+     <div>
+      <a href="https://tailwindcss.com/">
+      <button class="border"  >
+      <img src="./imagenes/tail.png" alt="html" style="width: auto; height: 100px;">
+      </button>
+     </div>
+       <h3 class="lilita-one-regular"> <strong> MI TITULO</strong></h3>
+      </button>
+     </a>
+   <a href="mi titulo" class="flex items-center justify-center">
+      <button class="rounded-full" style=" border: solid 2px rgb(113, 238, 12) ; background-color:gray; padding: 10px;">
+      <img src="./imagenes/sombrero.png" alt="html" style="width: auto; height: 150px; padding: 0; ">
+     </button>
+     </a>
   </div>
  </div>
+ 
 
+<div class="h-[27%] bg-[url('./imagenes/sud.png')] bg-cover bg-center text-center mt-10">
+  <h3 class="lilita-one-regular text-3xl mb-[99%]">MI PROYECTO MAS <br> IMPORTENTE</h3>
+  
+  
+  <a href="" class="w-[50%]  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 " ;">Mi Proyecto</a>
+
+
+</div>
 
 
 </main>
