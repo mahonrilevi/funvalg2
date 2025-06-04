@@ -15,7 +15,7 @@ do{
     let retirar = parseFloat(prompt("cuanto requieres sacar"));
     if (retirar > 0 && retirar <= tusaldo){
         tusaldo -= retirar;
-     alert("Has retirado $" + retirar.toFixed(2) + ".\nNuevo saldo: $" + tusaldo.toFixed);
+     alert("Has retirado $" + retirar.toFixed(2) );
     } else if( retirar > tusaldo){
         alert("Fondos insuficientes" );
     }else {
