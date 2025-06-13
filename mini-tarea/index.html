@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menú con Header y Logo</title>
-  
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./main.js" defer></script>
+  <script src="./habilidades.js" defer></script>
+
   <link rel="stylesheet" href="./output.css">
   <link rel="stylesheet" href="./style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,6 +33,12 @@
   margin: 40px ;
 
 }
+.border {
+    border: 3px solid;
+    border-radius: 10px;
+    border-color: rgb(184, 184, 196);
+}
+
 
 </style>
 </head>
@@ -94,7 +101,7 @@
     FRONTEND DEVELOPER
   </h1>
   <div class="flex justify-center"> 
-  <a href="https://mahonrilevi.github.io/funvalg2/"
+  <a href="http://127.0.0.1:5501/proyectos/proyectos.html"
      class="inline-block mt-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 md:text-lg">
     Mis Proyectos
   </a>
@@ -162,8 +169,8 @@
  </div>
  
 
-<div class="block sm:hidden h-[600px] bg-[url('./imagenes/sud.png')] rounded-9xl bg-no-repeat bg-center text-center mt-10">
-  <h3 class="lilita-one-regular text-3xl pt-[63px] mb-[350px]">MI PROYECTO MAS <br> IMPORTENTE</h3>
+<div class="block sm:hidden h-[600px] bg-[url('./imagenes/sud.png')] rounded-9xl bg-no-repeat bg-center text-center mt-30">
+  <h3 class="lilita-one-regular text-3xl pt-[63px] mb-[350px]  ">MI PROYECTO MAS <br> IMPORTENTE</h3>
   
   
   <a href="" class="w-[50%] h-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 " ;">Mi Proyecto</a>
@@ -220,6 +227,77 @@
   </div>
 </footer>
 
+<script>
+function mostrarHabilidades() {
+  const contenedor = document.querySelector('.grid.grid-cols-2');
+  if (!contenedor || !window.habilidades) return;
+
+  contenedor.innerHTML = '';
+
+  habilidades.forEach(hab => {
+    const a = document.createElement('a');
+    a.href = hab.link;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+
+    const img = document.createElement('img');
+    img.src = hab.imagen;
+    img.alt = hab.nombre;
+    img.className = 'h-40 sm:h-44 md:h-48 transition-transform duration-300 hover:scale-105';
+
+    const label = document.createElement('p');
+    label.textContent = `${hab.nombre} (${hab.nivel})`;
+    label.className = 'text-center text-sm mt-2 font-medium text-gray-700';
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'flex flex-col items-center';
+    wrapper.appendChild(img);
+    wrapper.appendChild(label);
+
+    a.appendChild(wrapper);
+    contenedor.appendChild(a);
+  });
+}
+
+
+function validarFormulario() {
+  const nombre = document.getElementById('large-input');
+  const email = document.getElementById('base-input');
+  const comentario = document.getElementById('small-input');
+
+  if (!nombre.value || !email.value || !comentario.value) {
+    alert('Por favor, completa todos los campos.');
+    return false;
+  }
+
+  alert('Formulario enviado correctamente. ¡Gracias por tu mensaje!');
+  return true;
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  mostrarHabilidades();
+
+  const form = document.querySelector('form');
+  if (form) {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      validarFormulario();
+    });
+  }
+
+
+  const titulo = document.querySelector('h1');
+  if (titulo) {
+    titulo.addEventListener('mouseenter', () => {
+      titulo.style.color = '#38bdf8';
+    });
+    titulo.addEventListener('mouseleave', () => {
+      titulo.style.color = '';
+    });
+  }
+});
+</script>
 
 </body>
 </html>

@@ -1,7 +1,22 @@
-.border {
-    border: 3px solid;
-    border-radius: 10px;
-    border-color: rgb(184, 184, 196);
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+.fade-in {
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.proyecto-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}.proyecto-hover:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
 
