@@ -1,6 +1,5 @@
 import { habilidades } from "./habilidades.js";
 
-// Función para cargar y mostrar las habilidades
 function cargarHabilidades() {
   const contenedor = document.querySelector('.grid.grid-cols-2');
   if (!contenedor || typeof habilidades === 'undefined') {
@@ -8,14 +7,14 @@ function cargarHabilidades() {
     return;
   }
 
-  contenedor.innerHTML = ''; // Limpia el contenedor antes de añadir las habilidades
+  contenedor.innerHTML = ''; 
 
   habilidades.forEach(habilidad => {
     const a = document.createElement('a');
     a.href = habilidad.link;
     a.target = '_blank';
     a.rel = 'noopener noreferrer';
-    a.className = 'flex flex-col items-center'; // Añadir clases para centrar el contenido
+    a.className = 'flex flex-col items-center'; 
 
     const img = document.createElement('img');
     img.src = habilidad.imagen;
@@ -27,14 +26,14 @@ function cargarHabilidades() {
     label.className = 'text-center text-sm mt-2 font-medium text-gray-700';
 
     a.appendChild(img);
-    a.appendChild(label); // Añade el label con el nombre y nivel
+    a.appendChild(label); 
     contenedor.appendChild(a);
   });
 }
 
-// Función para validar el formulario
+
 function validarFormulario(event) {
-  event.preventDefault(); // Previene el envío del formulario por defecto
+  event.preventDefault(); 
 
   const nombreInput = document.getElementById('large-input');
   const emailInput = document.getElementById('base-input');
@@ -54,47 +53,32 @@ function validarFormulario(event) {
   console.log('📨 Datos del formulario enviados:');
   console.table(datos);
 
-  // Aquí podrías añadir la lógica para enviar los datos, por ejemplo, con EmailJS
-  // emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", datos)
-  //   .then(function(response) {
-  //      console.log('SUCCESS!', response.status, response.text);
-  //      alert('Formulario enviado correctamente. ¡Gracias por tu mensaje!');
-  //   }, function(error) {
-  //      console.log('FAILED...', error);
-  //      alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.');
-  //   });
+
 
   alert('Formulario enviado correctamente. ¡Gracias por tu mensaje!');
 
-  // Opcional: limpiar el formulario después del envío
+ 
   nombreInput.value = '';
   emailInput.value = '';
   comentarioInput.value = '';
 }
-
-// Event Listeners cuando el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', () => {
-  // Cargar las habilidades al iniciar
+ 
   cargarHabilidades();
 
-  // Configurar el evento del formulario
   const form = document.querySelector('form');
   if (form) {
     form.addEventListener('submit', validarFormulario);
   }
-
-  // Animación del título
   const tituloPrincipal = document.querySelector('.lilita-one-regular');
   if (tituloPrincipal) {
     tituloPrincipal.addEventListener('mouseenter', () => {
-      tituloPrincipal.style.color = '#38bdf8'; // Tailwind CSS blue-400
+      tituloPrincipal.style.color = '#38bdf8'; 
     });
     tituloPrincipal.addEventListener('mouseleave', () => {
-      tituloPrincipal.style.color = ''; // Vuelve al color original
+      tituloPrincipal.style.color = '';
     });
   }
-
-  // Lógica del botón del menú móvil
   const menuBtn = document.getElementById('menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
 
